@@ -14,32 +14,32 @@ export default function About() {
           I aspire to instill confidence and happiness
         </div>
         <div className="w-full flex">
-          <div className="w-1/2 relative">
+          <div className="w-1/2 relative mb-16">
             <div className=" h-[100vh]">
               <Image
                 src="/images/hair-makeup-5.jpg"
                 alt="woman holding bouquet of flowers"
                 width={800}
                 height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8  rounded-2xl p-10 left-28 top-0"
+                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 top-0"
               />
               <Image
                 src="/images/hair-makeup-2.jpg"
                 alt="Midzy adjusting a client's hair"
                 width={800}
                 height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8 border-green-200 p-10 left-28 bottom-0"
+                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 bottom-0"
               />
               <Image
                 src="/images/hair-makeup-8.jpg"
                 alt="Midzy adjusting a client's makeup/eyelashes"
                 width={800}
                 height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8 p-10 right-12 top-1/2 transform -translate-y-1/2"
+                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 right-12 top-1/2 transform -translate-y-1/2"
               />
             </div>
           </div>
-          <div className="w-1/2 flex flex-wrap">
+          <div className="w-1/2">
             <h1 className={`w-full text-6xl p-10 ${lexendTera.className}`}>
               About Me
             </h1>
@@ -53,8 +53,96 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div>
-          <h1>Expertise</h1>
+        <h1
+          className={`w-full text-6xl mx-16 my-24 underline ${lexendTera.className}`}
+        >
+          Expertise
+        </h1>
+        <div className="w-full flex flex-wrap mb-20">
+          <div className="w-1/2 flex flex-wrap justify-center">
+            <Image
+              src="/images/hair-makeup-1.jpg"
+              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
+              width={500}
+              height={400}
+            />
+          </div>
+          <div className="w-1/2 ">
+            <h1 className={`w-full text-6xl ${lexendTera.className} `}>
+              Makeup
+            </h1>
+            <p className={`w-full text-5xl leading-loose ${kameron.className}`}>
+              Makeup is so powerful, it&apos;s magical how makeup can enhance
+              one&apos;s natural beauty. I&apos;ve been doing make up since X
+              (adjust this to experience/change it all together). From weddings
+              to Quinceañeras, from the natural-look to extravagant, I can
+              deliver!
+            </p>
+          </div>
+        </div>
+        <div className="w-full flex flex-wrap mb-20 ">
+          <div className="w-1/2 ">
+            <h1 className={`w-full text-6xl mx-16 ${lexendTera.className} `}>
+              Hair
+            </h1>
+            <p
+              className={`w-full text-5xl leading-loose mx-16 ${kameron.className}`}
+            >
+              I learned how to style hair from/when (will edit this with info).
+              And ever since then, I have crafted and sculpted all kinds of
+              looks and styles. (Maybe some specific hair styles you&apos;re
+              super good at)
+            </p>
+          </div>
+          <div className="w-1/2 flex flex-wrap justify-center">
+            <Image
+              src="/images/hair-2.jpg"
+              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
+              width={500}
+              height={400}
+            />
+          </div>
+        </div>
+        <div className="w-full flex flex-wrap mb-20">
+          <div className="w-1/2 flex flex-wrap justify-center">
+            <Image
+              src="/images/eyelashes.jpg"
+              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
+              width={500}
+              height={500}
+            />
+          </div>
+          <div className="w-1/2 ">
+            <h1 className={`w-full text-6xl ${lexendTera.className} `}>
+              Eyelash Extensions
+            </h1>
+            <p className={`w-full text-5xl leading-loose ${kameron.className}`}>
+              Let&apos;s extend our reach towards greater beauty. Our eyes can
+              say so much with just a look; so why not add a touch of flair.
+            </p>
+          </div>
+        </div>
+        <div className="w-full flex flex-wrap mb-20 ">
+          <div className="w-1/2 ">
+            <h1 className={`w-full text-6xl mx-16 ${lexendTera.className} `}>
+              Eyebrows
+            </h1>
+            <p
+              className={`w-full text-5xl leading-loose mx-16 ${kameron.className}`}
+            >
+              They say eyes are windows to the soul. Well, in this case,
+              eyebrows are the frame for your eyes. Together let&apos;s find a
+              frame that will support and bring more attention to those eyes.
+            </p>
+          </div>
+          <div className="w-1/2 flex flex-wrap justify-center">
+            <Image
+              src="/images/eyelashes-2.jpg"
+              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
+              width={500}
+              height={400}
+            />
+          </div>
         </div>
       </div>
     </div>
