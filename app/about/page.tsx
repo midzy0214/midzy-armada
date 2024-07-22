@@ -1,8 +1,12 @@
+// import { useAnimation } from "framer-motion";
+import { AboutMeMidzyImages } from "../components/AboutMeMidzyImages";
 import { Header } from "../components/Header.";
 import { kameron, lexendTera } from "../components/Header.";
 import Image from "next/image";
 
 export default function About() {
+  // const fromLeftToRight = useAnimation();
+
   return (
     <div>
       <Header />
@@ -15,29 +19,7 @@ export default function About() {
         </div>
         <div className="w-full flex">
           <div className="w-1/2 relative mb-16">
-            <div className=" h-[100vh]">
-              <Image
-                src="/images/hair-makeup-5.jpg"
-                alt="woman holding bouquet of flowers"
-                width={800}
-                height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 top-0"
-              />
-              <Image
-                src="/images/hair-makeup-2.jpg"
-                alt="Midzy adjusting a client's hair"
-                width={800}
-                height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 bottom-0"
-              />
-              <Image
-                src="/images/hair-makeup-8.jpg"
-                alt="Midzy adjusting a client's makeup/eyelashes"
-                width={800}
-                height={800}
-                className="absolute w-1/2 h-1/2 object-cover border-8 rounded-2xl border-gray-400 p-4 right-12 top-1/2 transform -translate-y-1/2"
-              />
-            </div>
+            <AboutMeMidzyImages />
           </div>
           <div className="w-1/2">
             <h1 className={`w-full text-6xl p-10 ${lexendTera.className}`}>
