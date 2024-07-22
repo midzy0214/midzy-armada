@@ -6,7 +6,10 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className="w-full flex">
+      <div
+        className="w-full flex"
+        style={{ backgroundColor: "rgb(211,208,203)" }}
+      >
         <div className="w-1/2 flex ml-16 flex-wrap">
           <h1
             className={`text-6xl my-16 leading-relaxed ${lexendTera.className}`}

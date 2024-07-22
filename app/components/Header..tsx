@@ -1,4 +1,5 @@
 import { Lexend_Tera, Kameron } from "next/font/google";
+import Link from "next/link";
 
 export const lexendTera = Lexend_Tera({
   subsets: ["latin"],
@@ -26,9 +27,11 @@ export function Header() {
       </h1>
       <div className="w-full flex flex-wrap divide-x-4 divide-green-200 mb-2">
         <button className={`w-1/5 text-3xl ${kameron.className}`}>
-          Welcome
+          <Link href={"/"}>Welcome</Link>
         </button>
-        <button className={`w-1/5 text-3xl ${kameron.className}`}>About</button>
+        <button className={`w-1/5 text-3xl ${kameron.className}`}>
+          <Link href={"about"}>About</Link>
+        </button>
         <button className={`w-1/5 text-3xl ${kameron.className}`}>
           Services
         </button>
