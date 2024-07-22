@@ -55,17 +55,14 @@ export default function HomepageCollage() {
   }, [pulsePics1, pulsePics2, pulsePics3, pulsePics4, pulsePics5]);
 
   return (
-    <div
-      className="w-full flex flex-wrap h-[150vh]"
-      style={{ backgroundColor: "rgb(211,208,203)" }}
-    >
+    <div className="w-full flex flex-wrap h-[150vh] bg-backgroundGray">
       <div className="w-full flex h-1/2">
         {" "}
         <motion.div animate={pulsePics1} className="w-3/5">
           <Image
             src="/images/hair.jpg"
             alt="hair styled with a braid"
-            className="object-fit object-center w-full h-full"
+            className="object-cover object-center w-full h-full"
             width={600}
             height={500}
           />
@@ -74,7 +71,7 @@ export default function HomepageCollage() {
           <Image
             src="/images/eyelashes.jpg"
             alt="eyes with eyelash extensions and makeup"
-            className="object-fit object-center w-full h-full"
+            className="object-cover object-center w-full h-full"
             width={600}
             height={300}
           />
@@ -86,7 +83,7 @@ export default function HomepageCollage() {
           <Image
             src="/images/hair-makeup-4.jpg"
             alt="woman with makeup done, holding a boquet of flowers"
-            className="object-fit object-center w-full h-full"
+            className="object-cover object-center w-full h-full"
             width={600}
             height={500}
           />
@@ -95,7 +92,7 @@ export default function HomepageCollage() {
           <Image
             src="/images/hair-makeup-6.jpg"
             alt="woman with makeup done, with eyes closed, showing off her eyelashes"
-            className="object-fit object-center w-full h-full"
+            className="object-cover object-center w-full h-full"
             width={600}
             height={500}
           />
@@ -104,7 +101,7 @@ export default function HomepageCollage() {
           <Image
             src="/images/hair-makeup-8.jpg"
             alt="Midzy adjusting a clients makeup"
-            className="object-fit object-center w-full h-full"
+            className="object-cover object-center w-full h-full"
             width={600}
             height={500}
           />
