@@ -10,10 +10,7 @@ export default function About() {
   return (
     <div>
       <Header />
-      <div
-        className="w-full flex flex-wrap"
-        style={{ backgroundColor: "rgb(211,208,203)" }}
-      >
+      <div className="w-full flex flex-wrap bg-backgroundGray">
         <div className={`w-full text-6xl m-16 ${lexendTera.className}`}>
           I aspire to instill confidence and happiness
         </div>

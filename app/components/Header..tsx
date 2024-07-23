@@ -13,10 +13,7 @@ export const kameron = Kameron({
 
 export function Header() {
   return (
-    <div
-      className="w-full flex flex-wrap"
-      style={{ backgroundColor: "rgb(224,158,143" }}
-    >
+    <div className="w-full flex flex-wrap bg-headerPink">
       <h1 className={`w-full text-6xl ml-28 mt-16 ${lexendTera.className}`}>
         Midzy Armada
       </h1>
