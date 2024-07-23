@@ -1,27 +1,54 @@
-// import { useAnimation } from "framer-motion";
+"use client";
+import { motion, useInView } from "framer-motion";
 import { AboutMeMidzyImages } from "../components/AboutMeMidzyImages";
-import { Header } from "../components/Header.";
-import { kameron, lexendTera } from "../components/Header.";
+import { Header } from "../components/Header";
+import { kameron, lexendTera } from "../components/Header";
 import Image from "next/image";
+import { useRef } from "react";
 
 export default function About() {
-  // const fromLeftToRight = useAnimation();
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const isInView1 = useInView(ref1, {
+    amount: 0.3,
+  });
+  const isInView2 = useInView(ref2, {
+    amount: 0.3,
+  });
+  const isInView3 = useInView(ref3, {
+    amount: 0.3,
+  });
 
   return (
     <div>
       <Header />
       <div className="w-full flex flex-wrap bg-backgroundGray">
-        <div className={`w-full text-6xl m-16 ${lexendTera.className}`}>
+        <motion.div
+          ref={ref1}
+          initial={{ x: "-20%", opacity: 0.3 }}
+          animate={isInView1 ? { x: "0%", opacity: 1 } : {}}
+          transition={{ duration: 1 }}
+          className={`w-full text-6xl m-16 leading-loose mb-36 ${lexendTera.className}`}
+        >
           I aspire to instill confidence and happiness
-        </div>
+        </motion.div>
         <div className="w-full flex">
           <div className="w-1/2 relative mb-16">
             <AboutMeMidzyImages />
           </div>
-          <div className="w-1/2">
+          <motion.div
+            className="w-1/2"
+            ref={ref3}
+            initial={{ x: "10%", opacity: 0.1 }}
+            animate={isInView3 ? { x: "0%", opacity: 1 } : {}}
+            transition={{ duration: 1 }}
+          >
             <h1 className={`w-full text-6xl p-10 ${lexendTera.className}`}>
               About Me
             </h1>
+
             <p
               className={`w-full text-5xl p-10 leading-loose ${kameron.className}`}
             >
@@ -30,13 +57,17 @@ export default function About() {
               techniques and abilities, not only to better myself, but to better
               provide for my clients&apos; needs.
             </p>
-          </div>
+          </motion.div>
         </div>
-        <h1
-          className={`w-full text-6xl mx-16 my-24 underline ${lexendTera.className}`}
+        <motion.div
+          ref={ref2}
+          initial={{ x: "-20%", opacity: 0.3 }}
+          animate={isInView2 ? { x: "0%", opacity: 1 } : {}}
+          transition={{ duration: 1 }}
+          className="w-full text-6xl mx-16 my-24"
         >
-          Expertise
-        </h1>
+          <h1 className={` underline ${lexendTera.className}`}>Expertise</h1>
+        </motion.div>
         <div className="w-full flex flex-wrap mb-20">
           <div className="w-1/2 flex flex-wrap justify-center">
             <Image

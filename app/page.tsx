@@ -1,6 +1,6 @@
-import { Header } from "./components/Header.";
-import { lexendTera } from "./components/Header.";
-import { kameron } from "./components/Header.";
+import { Header } from "./components/Header";
+import { lexendTera } from "./components/Header";
+import { kameron } from "./components/Header";
 import HomepageCollage from "./components/HomepageCollage";
 export default function Home() {
   return (

@@ -1,12 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export function AboutMeMidzyImages() {
+  const ref1 = useRef(null);
+
+  const isInView1 = useInView(ref1, {
+    amount: 0.5,
+  });
+
   return (
-    <div className=" h-[100vh]">
+    <div className=" h-[100vh]" ref={ref1}>
       <motion.div
+        initial={{ y: "50%", opacity: 0 }}
+        animate={isInView1 ? { y: "0%", opacity: 1 } : {}}
+        transition={{ duration: 1 }}
         className="absolute w-1/2 h-1/2 border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 top-0"
         whileHover={{ scale: 1.1 }}
       >
@@ -19,6 +29,9 @@ export function AboutMeMidzyImages() {
         />
       </motion.div>
       <motion.div
+        initial={{ y: "50%", opacity: 0 }}
+        animate={isInView1 ? { y: "0%", opacity: 1 } : {}}
+        transition={{ duration: 1 }}
         className="absolute w-1/2 h-1/2  border-8 rounded-2xl border-gray-400 p-4 -m-2 left-28 bottom-0"
         whileHover={{ scale: 1.1 }}
       >
@@ -31,7 +44,10 @@ export function AboutMeMidzyImages() {
         />
       </motion.div>
       <motion.div
-        className="absolute w-1/2 h-1/2   right-12 top-1/2 "
+        initial={{ y: "50%", opacity: 0 }}
+        animate={isInView1 ? { y: "0%", opacity: 1 } : {}}
+        transition={{ duration: 1 }}
+        className="absolute w-1/2 h-1/2 right-12 top-1/2 "
         whileHover={{ scale: 1.1 }}
       >
         <Image
