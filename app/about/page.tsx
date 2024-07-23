@@ -3,8 +3,9 @@ import { motion, useInView } from "framer-motion";
 import { AboutMeMidzyImages } from "../components/AboutMeMidzyImages";
 import { Header } from "../components/Header";
 import { kameron, lexendTera } from "../components/Header";
-import Image from "next/image";
 import { useRef } from "react";
+import { Expertise } from "../components/Expertise";
+import { skills } from "../data/data";
 
 export default function About() {
   const ref1 = useRef(null);
@@ -68,92 +69,9 @@ export default function About() {
         >
           <h1 className={` underline ${lexendTera.className}`}>Expertise</h1>
         </motion.div>
-        <div className="w-full flex flex-wrap mb-20">
-          <div className="w-1/2 flex flex-wrap justify-center">
-            <Image
-              src="/images/hair-makeup-1.jpg"
-              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
-              width={500}
-              height={400}
-            />
-          </div>
-          <div className="w-1/2 ">
-            <h1 className={`w-full text-6xl ${lexendTera.className} `}>
-              Makeup
-            </h1>
-            <p className={`w-full text-5xl leading-loose ${kameron.className}`}>
-              Makeup is so powerful, it&apos;s magical how makeup can enhance
-              one&apos;s natural beauty. I&apos;ve been doing make up since X
-              (adjust this to experience/change it all together). From weddings
-              to Quinceañeras, from the natural-look to extravagant, I can
-              deliver!
-            </p>
-          </div>
-        </div>
-        <div className="w-full flex flex-wrap mb-20 ">
-          <div className="w-1/2 ">
-            <h1 className={`w-full text-6xl mx-16 ${lexendTera.className} `}>
-              Hair
-            </h1>
-            <p
-              className={`w-full text-5xl leading-loose mx-16 ${kameron.className}`}
-            >
-              I learned how to style hair from/when (will edit this with info).
-              And ever since then, I have crafted and sculpted all kinds of
-              looks and styles. (Maybe some specific hair styles you&apos;re
-              super good at)
-            </p>
-          </div>
-          <div className="w-1/2 flex flex-wrap justify-center">
-            <Image
-              src="/images/hair-2.jpg"
-              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
-              width={500}
-              height={400}
-            />
-          </div>
-        </div>
-        <div className="w-full flex flex-wrap mb-20">
-          <div className="w-1/2 flex flex-wrap justify-center">
-            <Image
-              src="/images/eyelashes.jpg"
-              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
-              width={500}
-              height={500}
-            />
-          </div>
-          <div className="w-1/2 ">
-            <h1 className={`w-full text-6xl ${lexendTera.className} `}>
-              Eyelash Extensions
-            </h1>
-            <p className={`w-full text-5xl leading-loose ${kameron.className}`}>
-              Let&apos;s extend our reach towards greater beauty. Our eyes can
-              say so much with just a look; so why not add a touch of flair.
-            </p>
-          </div>
-        </div>
-        <div className="w-full flex flex-wrap mb-20 ">
-          <div className="w-1/2 ">
-            <h1 className={`w-full text-6xl mx-16 ${lexendTera.className} `}>
-              Eyebrows
-            </h1>
-            <p
-              className={`w-full text-5xl leading-loose mx-16 ${kameron.className}`}
-            >
-              They say eyes are windows to the soul. Well, in this case,
-              eyebrows are the frame for your eyes. Together let&apos;s find a
-              frame that will support and bring more attention to those eyes.
-            </p>
-          </div>
-          <div className="w-1/2 flex flex-wrap justify-center">
-            <Image
-              src="/images/eyelashes-2.jpg"
-              alt="client with their makeup and hair done, smiling, holding a boquet of flowers"
-              width={500}
-              height={400}
-            />
-          </div>
-        </div>
+        {skills.map((skill, index) => (
+          <Expertise key={index} skills={skill} index={index} />
+        ))}
       </div>
     </div>
   );
