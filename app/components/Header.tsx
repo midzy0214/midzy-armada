@@ -33,7 +33,7 @@ export function Header() {
           Services
         </button>
         <button className={`w-1/5 text-3xl ${kameron.className}`}>
-          Contact
+          <Link href={"contact"}>Contact</Link>
         </button>
         <button className={`w-1/5 text-3xl ${kameron.className}`}>
           Portfolio

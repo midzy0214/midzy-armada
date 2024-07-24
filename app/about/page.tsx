@@ -42,7 +42,7 @@ export default function About() {
           <motion.div
             className="w-1/2"
             ref={ref3}
-            initial={{ x: "10%", opacity: 0.1 }}
+            initial={{ x: "10%", opacity: 0 }}
             animate={isInView3 ? { x: "0%", opacity: 1 } : {}}
             transition={{ duration: 1 }}
           >
