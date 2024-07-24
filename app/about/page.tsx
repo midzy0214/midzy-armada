@@ -23,7 +23,7 @@ export default function About() {
   });
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <div className="w-full flex flex-wrap bg-backgroundGray">
         <motion.div
@@ -31,10 +31,12 @@ export default function About() {
           initial={{ x: "-20%", opacity: 0.3 }}
           animate={isInView1 ? { x: "0%", opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          className={`w-full text-6xl m-16 leading-loose mb-36 ${lexendTera.className}`}
+          className={`w-full text-6xl m-16 leading-relaxed ${lexendTera.className}`}
         >
           I aspire to instill confidence and happiness
         </motion.div>
+        <hr className="w-full border-2 border-green-200" />
+
         <div className="w-full flex">
           <div className="w-1/2 relative mb-16">
             <AboutMeMidzyImages />

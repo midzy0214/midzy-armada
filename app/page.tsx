@@ -28,7 +28,9 @@ export default function Home() {
           >
             Let&apos;s bring out your inner beauty
           </h1>
-          <p className={`text-5xl leading-snug ${kameron.className}`}>
+          <hr className="w-full border-2 border-green-200" />
+
+          <p className={`text-5xl leading-snug my-16 ${kameron.className}`}>
             Armida, or better known as “Midzy” by her friends, is a passionate
             artist who thrives on bringing out the inner beauty of her clients
           </p>
