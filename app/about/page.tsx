@@ -28,32 +28,34 @@ export default function About() {
       <div className="w-full flex flex-wrap bg-backgroundGray">
         <motion.div
           ref={ref1}
-          initial={{ x: "-20%", opacity: 0.3 }}
+          initial={{ x: "-20%", opacity: 0 }}
           animate={isInView1 ? { x: "0%", opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          className={`w-full text-6xl m-16 leading-relaxed ${lexendTera.className}`}
+          className={`w-full text-lg ml-4 lg:text-6xl lg:m-16 leading-relaxed ${lexendTera.className}`}
         >
           I aspire to instill confidence and happiness
         </motion.div>
-        <hr className="w-full border-2 border-green-200" />
+        <hr className="w-full border-2 border-green-200 mb-8" />
 
-        <div className="w-full flex">
-          <div className="w-1/2 relative mb-16">
+        <div className="w-full flex flex-wrap">
+          <div className="lg:w-1/2 relative">
             <AboutMeMidzyImages />
           </div>
           <motion.div
-            className="w-1/2"
+            className="w-full lg:w-1/2"
             ref={ref3}
             initial={{ x: "10%", opacity: 0 }}
             animate={isInView3 ? { x: "0%", opacity: 1 } : {}}
             transition={{ duration: 1 }}
           >
-            <h1 className={`w-full text-6xl p-10 ${lexendTera.className}`}>
+            <h1
+              className={`w-full text-lg lg:text-6xl lg:p-10 ${lexendTera.className}`}
+            >
               About Me
             </h1>
 
             <p
-              className={`w-full text-5xl p-10 leading-loose ${kameron.className}`}
+              className={`w-full text-md lg:text-5xl p-10 leading-loose lg:mb-24 ${kameron.className}`}
             >
               Hello, my name is &quot;Midzy&quot; Armada. I have been doing
               hair, makeup, and eyebrows for X years. I am constantly honing my
