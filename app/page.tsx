@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className="w-full flex bg-backgroundGray">
+      <div className="w-full flex-none lg:flex bg-backgroundGray">
         <motion.div
-          className="w-1/2 flex ml-4 lg:ml-16 flex-wrap"
+          className="w-full lg:w-1/2 flex ml-4 lg:ml-16 flex-wrap"
           ref={ref}
-          initial={{ x: "-20%", opacity: 0.3 }}
+          initial={{ x: "-20%", opacity: 0 }}
           animate={isInView ? { x: "0%", opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
@@ -37,7 +37,7 @@ export default function Home() {
             artist who thrives on bringing out the inner beauty of her clients
           </p>
         </motion.div>
-        <div className="w-1/2"> placeholder</div>
+        <div className="w-full lg:w-1/2"> placeholder</div>
       </div>
       <HomepageCollage />
     </main>
