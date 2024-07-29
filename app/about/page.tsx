@@ -49,7 +49,7 @@ export default function About() {
             transition={{ duration: 1 }}
           >
             <h1
-              className={`w-full text-lg lg:text-6xl lg:p-10 ${lexendTera.className}`}
+              className={`w-full text-lg lg:text-6xl lg:p-10 underline ${lexendTera.className}`}
             >
               About Me
             </h1>
@@ -69,7 +69,7 @@ export default function About() {
           initial={{ x: "-20%", opacity: 0.3 }}
           animate={isInView2 ? { x: "0%", opacity: 1 } : {}}
           transition={{ duration: 1 }}
-          className="w-full text-6xl mx-16 my-24"
+          className="w-full text-lg lg:text-6xl lg:mx-16 mb-10 lg:my-24"
         >
           <h1 className={` underline ${lexendTera.className}`}>Expertise</h1>
         </motion.div>

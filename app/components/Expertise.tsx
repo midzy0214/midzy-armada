@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { lexendTera, kameron } from "./Header";
-import { Skills, skills } from "../data/data";
+import { Skills } from "../data/data";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useWindowSize } from "./UseWindowSize";
 
 type ExpertiseProps = {
   skills: Skills;
@@ -15,6 +16,9 @@ export function Expertise({ skills, index }: ExpertiseProps) {
     amount: 0.3,
   });
 
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+
   if (!skills) {
     console.error("Skills prop is undefined");
     return null;
@@ -23,17 +27,17 @@ export function Expertise({ skills, index }: ExpertiseProps) {
   return (
     <div>
       <motion.div
-        className={`w-full flex flex-wrap mb-20 ${
-          isOdd ? "flex-row-reverse pl-20" : "flex-row pr-20"
+        className={`w-full flex flex-wrap mb-4 lg:mb-20 justify-center ${
+          !isMobile && isOdd
+            ? "flex-row-reverse pl-20"
+            : "flex-row p-4 lg:pr-20"
         }`}
         ref={ref}
-        initial={
-          isOdd ? { x: "10%", opacity: 0.1 } : { x: "-20%", opacity: 0.3 }
-        }
+        initial={isOdd ? { x: "40%", opacity: 0 } : { x: "-50%", opacity: 0 }}
         animate={isInView ? { x: "0%", opacity: 1 } : {}}
         transition={{ duration: 1 }}
       >
-        <div className="w-1/2 flex flex-wrap justify-center">
+        <div className="w-full lg:w-1/2 flex flex-wrap justify-center">
           <Image
             src={skills.image}
             alt={`${skills.name} image`}
@@ -41,11 +45,13 @@ export function Expertise({ skills, index }: ExpertiseProps) {
             width={500}
           />
         </div>
-        <div className="w-1/2">
-          <h1 className={`w-full text-6xl ${lexendTera.className} `}>
+        <div className="w-full lg:w-1/2">
+          <h1 className={`w-full text-lg lg:text-6xl ${lexendTera.className} `}>
             {skills.name}
           </h1>
-          <p className={`w-full text-5xl leading-loose ${kameron.className}`}>
+          <p
+            className={`w-full text-md lg:text-5xl leading-loose ${kameron.className}`}
+          >
             {skills.description}
           </p>
         </div>
