@@ -34,7 +34,7 @@ export default function Home() {
           <hr className="w-full border-2 border-green-200" />
 
           <p
-            className={`text-md lg:text-5xl leading-snug my-4 lg:my-16 ${kameron.className}`}
+            className={`text-md lg:text-5xl leading-snug mt-4 lg:my-16 ${kameron.className}`}
           >
             Armida, or better known as “Midzy” by her friends, is a passionate
             artist who thrives on bringing out the inner beauty of her clients
