@@ -37,12 +37,13 @@ export function Expertise({ skills, index }: ExpertiseProps) {
         animate={isInView ? { x: "0%", opacity: 1 } : {}}
         transition={{ duration: 1 }}
       >
-        <div className="w-full lg:w-1/2 flex flex-wrap justify-center">
+        <div className="w-full  lg:w-1/2 flex flex-wrap justify-center">
           <Image
             src={skills.image}
             alt={`${skills.name} image`}
-            height={400}
+            height={500}
             width={500}
+            className="lg:w-1/2 object-cover border-8 lg:border-[16px]"
           />
         </div>
         <div className="w-full lg:w-1/2">

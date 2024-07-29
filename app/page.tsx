@@ -6,18 +6,21 @@ import { lexendTera } from "./components/Header";
 import { kameron } from "./components/Header";
 import HomepageCollage from "./components/HomepageCollage";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     amount: 0.5,
   });
+
+  const mainImage = "/images/hair-makeup-9.jpg";
   return (
     <main className="min-h-screen">
       <Header />
       <div className="w-full flex-none lg:flex bg-backgroundGray">
         <motion.div
-          className="w-full lg:w-1/2 flex ml-4 lg:ml-16 flex-wrap"
+          className="w-full lg:h-[75vh] lg:w-1/2 flex lg:ml-16 flex-wrap"
           ref={ref}
           initial={{ x: "-20%", opacity: 0 }}
           animate={isInView ? { x: "0%", opacity: 1 } : {}}
@@ -37,9 +40,25 @@ export default function Home() {
             artist who thrives on bringing out the inner beauty of her clients
           </p>
         </motion.div>
-        <div className="w-full lg:w-1/2"> placeholder</div>
+        <motion.div
+          className="w-full lg:w-1/2 flex flex-wrap justify-center lg:my-16"
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1 }}
+        >
+          <Image
+            className="object-cover w-full lg:w-1/2 p-10"
+            src={mainImage}
+            alt={mainImage}
+            width={700}
+            height={700}
+          />
+        </motion.div>
       </div>
-      <HomepageCollage />
+      <div>
+        <HomepageCollage />
+      </div>
     </main>
   );
 }
