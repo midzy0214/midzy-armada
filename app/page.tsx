@@ -17,20 +17,22 @@ export default function Home() {
       <Header />
       <div className="w-full flex bg-backgroundGray">
         <motion.div
-          className="w-1/2 flex ml-16 flex-wrap"
+          className="w-1/2 flex ml-4 lg:ml-16 flex-wrap"
           ref={ref}
           initial={{ x: "-20%", opacity: 0.3 }}
           animate={isInView ? { x: "0%", opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
           <h1
-            className={`text-6xl my-16 leading-relaxed ${lexendTera.className}`}
+            className={`text-lg lg:text-6xl my-4 lg:my-16 leading-relaxed ${lexendTera.className}`}
           >
             Let&apos;s bring out your inner beauty
           </h1>
           <hr className="w-full border-2 border-green-200" />
 
-          <p className={`text-5xl leading-snug my-16 ${kameron.className}`}>
+          <p
+            className={`text-md lg:text-5xl leading-snug my-4 lg:my-16 ${kameron.className}`}
+          >
             Armida, or better known as “Midzy” by her friends, is a passionate
             artist who thrives on bringing out the inner beauty of her clients
           </p>
