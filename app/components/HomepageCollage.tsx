@@ -55,7 +55,7 @@ export default function HomepageCollage() {
   }, [pulsePics1, pulsePics2, pulsePics3, pulsePics4, pulsePics5]);
 
   return (
-    <div className="w-full flex flex-wrap h-[150vh] bg-backgroundGray">
+    <div className="w-full flex flex-wrap  bg-backgroundGray">
       <div className="w-full flex h-1/2">
         {" "}
         <motion.div animate={pulsePics1} className="w-3/5">
