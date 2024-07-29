@@ -27,7 +27,7 @@ export default function Contact() {
     amount: 0.3,
   });
   const isInView4 = useInView(ref4, {
-    amount: 0.3,
+    amount: 0.001,
   });
   return (
     <div className="bg-backgroundGray overflow-x-hidden overflow-y-hidden">
@@ -40,12 +40,12 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           <h1
-            className={`w-full text-6xl mt-16 ml-16 leading-relaxed  ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-6xl lg:mt-16 lg:ml-16 leading-relaxed  ${lexendTera.className}`}
           >
             Let&apos;s Talk!
           </h1>
           <h2
-            className={`w-full text-6xl ml-16 mb-16 leading-relaxed  ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-6xl lg:ml-16 lg:mb-16 leading-relaxed  ${lexendTera.className}`}
           >
             {" "}
             Tell me about what you need
@@ -60,14 +60,14 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           <h2
-            className={`w-full text-6xl text-center leading-relaxed mt-16 ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-6xl text-center leading-relaxed mt-4 lg:mt-16 ${lexendTera.className}`}
           >
             Contact
           </h2>
         </motion.div>
-        <div className="w-full flex">
+        <div className="w-full flex flex-wrap">
           <motion.div
-            className="w-1/2"
+            className="w-full lg:w-1/2"
             ref={ref3}
             initial={{ x: "-50%", opacity: 0 }}
             animate={isInView3 ? { x: "0%", opacity: 1 } : {}}
@@ -78,18 +78,18 @@ export default function Contact() {
               alt="Midzy doing clients hair"
               width={500}
               height={500}
-              className="w-full p-24 object-cover"
+              className="w-full p-4 lg:p-24 object-cover"
             />
           </motion.div>
           <motion.div
-            className="w-1/2"
+            className="w-full lg:w-1/2"
             ref={ref3}
             initial={{ x: "50%", opacity: 0 }}
             animate={isInView3 ? { x: "0%", opacity: 1 } : {}}
             transition={{ duration: 1 }}
           >
             <p
-              className={` py-24 px-20 text-5xl leading-relaxed ${kameron.className}`}
+              className={`lg:py-24 lg:px-20 text-lg lg:text-5xl leading-relaxed ${kameron.className}`}
             >
               I intend to help you look and feel your best. Whether you need
               makeup done for any occasion, a fresh hairstyle, or adding some
@@ -106,16 +106,16 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           <div
-            className={`w-1/3 flex items-center text-5xl ${kameron.className}`}
+            className={`w-full flex justify-center items-center mt-8  ${kameron.className}`}
           >
-            <FaPhoneVolume className="text-8xl mr-4 mb-12" />
-            &#40;714&#41;-757-1882
+            <FaPhoneVolume className="text-2xl lg:text-8xl" />
+            <p className="text-lg lg:text-5xl">&#40;714&#41;-757-1882</p>
           </div>
           <div
-            className={`w-1/3 flex justify-center items-center text-5xl ${kameron.className}`}
+            className={`w-full flex justify-center items-center ${kameron.className}`}
           >
-            <IoMdMail className="text-8xl mr-6" />
-            midzy0214@gmail.com
+            <IoMdMail className="text-2xl lg:text-8xl lg:mr-6" />
+            <p className="text-lg lg:text-5xl">midzy0214@gmail.com</p>
           </div>
         </motion.div>
       </div>
