@@ -27,7 +27,7 @@ export default function Home() {
           transition={{ duration: 1 }}
         >
           <h1
-            className={`text-lg lg:text-6xl my-4 lg:my-16 leading-relaxed ${lexendTera.className}`}
+            className={`text-lg lg:text-6xl mt-4 lg:mt-16 leading-relaxed ${lexendTera.className}`}
           >
             Let&apos;s bring out your inner beauty
           </h1>
