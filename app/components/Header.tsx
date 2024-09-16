@@ -16,12 +16,12 @@ export function Header() {
   return (
     <div className="w-full flex flex-wrap bg-headerPink">
       <h1
-        className={`w-full text-2xl lg:text-6xl my-4 lg:ml-28 lg:mt-16 ${lexendTera.className}`}
+        className={`w-full text-xl lg:text-5xl my-4 lg:ml-28 lg:mt-16 ${lexendTera.className}`}
       >
         Midzy Armada
       </h1>
       <h1
-        className={`w-full text-2xl flex-none lg:text-6xl lg:flex justify-end mb-4 lg:mr-28 lg:mb-16 ${lexendTera.className}`}
+        className={`w-full text-xl flex-none lg:text-5xl lg:flex justify-end mb-4 lg:mr-28 lg:mb-16 ${lexendTera.className}`}
       >
         Freelance Makeup Artist
       </h1>

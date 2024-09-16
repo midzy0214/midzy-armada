@@ -40,12 +40,12 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           <h1
-            className={`w-full text-xl lg:text-6xl lg:mt-16 lg:ml-16 leading-relaxed  ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-4xl lg:mt-16 lg:ml-16 leading-relaxed  ${lexendTera.className}`}
           >
             Let&apos;s Talk!
           </h1>
           <h2
-            className={`w-full text-xl lg:text-6xl lg:ml-16 lg:mb-16 leading-relaxed  ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-4xl lg:ml-16 lg:mb-16 leading-relaxed  ${lexendTera.className}`}
           >
             {" "}
             Tell me about what you need
@@ -60,7 +60,7 @@ export default function Contact() {
           transition={{ duration: 1 }}
         >
           <h2
-            className={`w-full text-xl lg:text-6xl text-center leading-relaxed mt-4 lg:mt-16 ${lexendTera.className}`}
+            className={`w-full text-xl lg:text-4xl text-center leading-relaxed mt-4 lg:mt-16 ${lexendTera.className}`}
           >
             Contact
           </h2>
@@ -89,7 +89,7 @@ export default function Contact() {
             transition={{ duration: 1 }}
           >
             <p
-              className={`lg:py-24 lg:px-20 text-lg lg:text-5xl leading-relaxed ${kameron.className}`}
+              className={`lg:py-24 lg:px-20 text-lg lg:text-3xl leading-relaxed ${kameron.className}`}
             >
               I intend to help you look and feel your best. Whether you need
               makeup done for any occasion, a fresh hairstyle, or adding some
@@ -108,13 +108,13 @@ export default function Contact() {
           <div
             className={`w-full flex justify-center items-center mt-8  ${kameron.className}`}
           >
-            <FaPhoneVolume className="text-2xl lg:text-8xl" />
+            <FaPhoneVolume className="text-xl lg:text-4xl my-4" />
             <p className="text-lg lg:text-5xl">&#40;714&#41;-757-1882</p>
           </div>
           <div
             className={`w-full flex justify-center items-center ${kameron.className}`}
           >
-            <IoMdMail className="text-2xl lg:text-8xl lg:mr-6" />
+            <IoMdMail className="text-xl lg:text-4xl lg:mr-6" />
             <p className="text-lg lg:text-5xl">midzy0214@gmail.com</p>
           </div>
         </motion.div>

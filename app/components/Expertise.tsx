@@ -47,11 +47,11 @@ export function Expertise({ skills, index }: ExpertiseProps) {
           />
         </div>
         <div className="w-full lg:w-1/2">
-          <h1 className={`w-full text-lg lg:text-6xl ${lexendTera.className} `}>
+          <h1 className={`w-full text-lg lg:text-4xl ${lexendTera.className} `}>
             {skills.name}
           </h1>
           <p
-            className={`w-full text-md lg:text-5xl leading-loose ${kameron.className}`}
+            className={`w-full text-md lg:text-3xl leading-loose ${kameron.className}`}
           >
             {skills.description}
           </p>
